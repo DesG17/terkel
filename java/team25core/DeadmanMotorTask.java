@@ -71,6 +71,11 @@ public class DeadmanMotorTask extends RobotTask {
     HoldPositionTask holdPositionTask;
     boolean useHoldMotorPositionTask=false;
 
+    final static int MINMAX_POSITION_NOT_SET = 0xdeadbeef;
+    
+    int minPosition = 0;
+    int maxPosition = 0;
+
     ///Creates a DeadmanMotorTask without HoldMotorPositionTask
     public DeadmanMotorTask(Robot robot, DcMotor motor, double power, GamepadTask.GamepadNumber gamepad, DeadmanButton button)
     {
